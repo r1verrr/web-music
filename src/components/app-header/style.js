@@ -12,7 +12,7 @@ export const HeaderWrapper = styled.div`
     }
     .divider{
         height: 5px;
-        background-color: #C20C8C;
+        background-color: #C20C0C;
     }
 `
 
