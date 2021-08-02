@@ -6,9 +6,20 @@ export function getTopBanners() {
     })
 }
 
+// 热门推荐
 export function getHotRecommends(limit) {
   return request({
     url: "/personalized",
+    params: {
+      limit
+    }
+  })
+}
+
+// 新碟上架
+export function getNewAlbums(limit) {
+  return request({
+    url: "/top/album",
     params: {
       limit
     }

@@ -11,7 +11,7 @@ import {
     BannerRight,
     BannerLeft
 } from'./style'
-function MQtopBanner(props) {
+function MQTopBanner(props) {
     // state
     const [currenIndex, setCrurrenIndex] = useState()
 
@@ -65,4 +65,4 @@ function MQtopBanner(props) {
 }
 
 
-export default memo(MQtopBanner)
+export default memo(MQTopBanner)
