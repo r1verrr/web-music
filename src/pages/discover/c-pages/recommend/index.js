@@ -1,12 +1,28 @@
 import React, { memo} from 'react'
 
 import MQtopBanner from './c-cpns/top-banner'
-import { RecommendWrapper } from './style'
+import MQHotReommend from './c-cpns/hot-recommend'
+import MQNewAlubm from './c-cpns/new_album'
+import MQRecommendRanking from './c-cpns/recommend-ranking'
+import { 
+    RecommendWrapper,
+    Content,
+    RecommendLeft,
+    RecommendRight
+ } from './style'
 
 function MQRecommend(props) {
     return (
         <RecommendWrapper>
             <MQtopBanner></MQtopBanner>
+            <Content className="wrap-v2">
+                <RecommendLeft>
+                    <MQHotReommend></MQHotReommend>
+                    <MQNewAlubm/>
+                    <MQRecommendRanking/>
+                </RecommendLeft>
+                <RecommendRight></RecommendRight>
+            </Content>
         </RecommendWrapper>
     )
 }
