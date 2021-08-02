@@ -1,25 +1,13 @@
-import React, { memo, useEffect} from 'react'
-import { useSelector, useDispatch ,shallowEqual} from 'react-redux'
+import React, { memo} from 'react'
 
-import { getTopBannerAction } from './store/actionCreator'
+import MQtopBanner from './c-cpns/top-banner'
+import { RecommendWrapper } from './style'
 
 function MQRecommend(props) {
- 
-    // 组件和redux关联，获取数据和进行操作 
-    const { topBanners }  = useSelector(state => ({
-        topBanners: state.recommend.topBanners
-    }),shallowEqual);
-    const dispatch = useDispatch()
-    // 发送网络请求 
-    useEffect(() => {
-        console.log(111111) 
-        dispatch(getTopBannerAction())
-    },[dispatch]);
-
     return (
-        <div>
-            MQRecommend:{topBanners.length}
-        </div>
+        <RecommendWrapper>
+            <MQtopBanner></MQtopBanner>
+        </RecommendWrapper>
     )
 }
 
