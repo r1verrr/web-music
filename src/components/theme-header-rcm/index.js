@@ -22,7 +22,7 @@ function MQThemeHeaderRcm(props) {
                     }
                 </div>
             </div>
-            <div className="rigth">
+            <div className="right">
                 <a href="todo">更多</a>
                 <i className="icon sprite_o2"></i>
             </div>
