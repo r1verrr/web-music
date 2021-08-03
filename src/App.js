@@ -10,7 +10,7 @@ import store from './store'
 
 import MQAppHeader from '@/components/app-header'
 import MQAppFooter from '@/components/app-footer'
-
+import MQAppPlayerBar from '@/pages/player/app-player-bar'
 
 export default memo(function App() {
     return (
@@ -21,6 +21,7 @@ export default memo(function App() {
                     {renderRoutes(routes)}
                 </Suspense>
                 <MQAppFooter/>
+                <MQAppPlayerBar/>
             </HashRouter>
         </Provider>
     )

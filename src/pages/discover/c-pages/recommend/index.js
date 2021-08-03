@@ -21,7 +21,9 @@ function MQRecommend(props) {
                     <MQNewAlbum/>
                     <MQRecommendRanking/>
                 </RecommendLeft>
-                <RecommendRight></RecommendRight>
+                <RecommendRight>
+                    
+                </RecommendRight>
             </Content>
         </RecommendWrapper>
     )
