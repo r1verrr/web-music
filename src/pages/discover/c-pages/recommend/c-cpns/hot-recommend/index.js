@@ -3,7 +3,7 @@ import { useDispatch, useSelector, shallowEqual } from 'react-redux'
 import { getHotRecommendAction } from '../../store/actionCreator'
 
 import MQThemeHeaderRcm from '@/components/theme-header-rcm'
-import HYSongsCover from '@/components/songs-cover'
+import MQSongsCover from '@/components/songs-cover'
 import {
     HotRecommendWrapper
 } from './style'
@@ -17,8 +17,8 @@ export default memo(function MQHotRecommend() {
     const { hotRecommends }  = useSelector(state => ({
         hotRecommends: state.getIn(["recommend","hotRecommends"])
     }),shallowEqual);
-    console.log(hotRecommends)
 
+    console.log(hotRecommends,'21')
     const dispatch = useDispatch()
 
     // other hooks
@@ -33,7 +33,7 @@ export default memo(function MQHotRecommend() {
                {
                 hotRecommends.map((item, index) => {
                   return(
-                    <HYSongsCover  key={item.id} info={item} />
+                    <MQSongsCover  key={item.id} info={item} />
                   )
                 })
               }

@@ -4,15 +4,15 @@ import { getCount, getSizeImage } from "@/utils/format-utils";
 
 import { SongsCoverWrapper } from './style';
 
-export default memo(function HYSongsCover(props) {
+export default memo(function MQSongsCover(props) {
   const { info } = props;
 
   return (
     <SongsCoverWrapper>
       <div className="cover-top">
         <img src={getSizeImage(info.picUrl, 140)} alt="" />
-        <div className="cover sprite_covor">
-          <div className="info sprite_covor">
+        <div className="cover sprite_cover">
+          <div className="info sprite_cover">
             <span>
               <i className="sprite_icon erji"></i>
               {getCount(info.playCount)}

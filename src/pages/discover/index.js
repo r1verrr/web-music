@@ -10,7 +10,6 @@ import {
 }from './style'
 export default memo(function MQDiscover(props) {
     const { route } = props
-    console.log(route)
     return (
         <DiscoverWrapper>
             <div className="top">

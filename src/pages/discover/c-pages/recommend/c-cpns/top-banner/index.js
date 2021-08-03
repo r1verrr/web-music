@@ -13,31 +13,31 @@ import {
 } from'./style'
 function MQTopBanner(props) {
     // state
-    const [currenIndex, setCrurrenIndex] = useState()
+    const [currentIndex, setCurrentIndex] = useState()
 
       // 组件和redux关联，获取数据和进行操作 
     const { topBanners }  = useSelector(state => ({
         // topBanners: state.get("recommend").get("topBanners")
         topBanners: state.getIn(["recommend","topBanners"])
     }),shallowEqual);
+    
     const dispatch = useDispatch()
 
     // 其它的hooks
     const bannerRef = useRef()
     // 发送网络请求 
     useEffect(() => {
-        console.log(111111) 
         dispatch(getTopBannerAction())
     },[dispatch]);
 
     const bannerChange = useCallback(
         (from, to) => {
-            setCrurrenIndex(to)
+            setCurrentIndex(to)
         },
         [],
     )
     // 其它业务逻辑
-    const bgImage = topBanners[currenIndex] && (topBanners[currenIndex].imageUrl + "?imageView&blur=40x20")
+    const bgImage = topBanners[currentIndex] && (topBanners[currentIndex].imageUrl + "?imageView&blur=40x20")
     return (
         <BannerWrapper bgImage={bgImage}>
             <div className="banner wrap-v2">
