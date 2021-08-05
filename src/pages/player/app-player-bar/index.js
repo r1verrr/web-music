@@ -1,4 +1,5 @@
 import React, { memo, useEffect, useRef, useState, useCallback } from 'react'
+import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux'
 
 import { getSizeImage, formatDate, getPlaySong } from '@/utils/format-utils';
@@ -80,9 +81,9 @@ export default memo(function MQAppPlayerBar() {
         </Control>
         <PlayInfo>
           <div className="image">
-            <a href='/todo'>
+            <NavLink to='/discover/player'>
               <img src={getSizeImage(currentSong.al.picUrl,35)} alt=""/>
-            </a>
+            </NavLink>
           </div>
           <div className="info">
             <div className="song"> 

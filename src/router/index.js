@@ -61,6 +61,10 @@ const routes = [
             {
                 path: "/discover/album",
                 component: MQAlbum
+            },
+            {
+                path:"/discover/player",
+                component:MQPlayer
             }
         ]
     },
@@ -73,11 +77,6 @@ const routes = [
         path:'/mine',
         exact:true,
         component:MQMine
-    },
-    {
-        path:'/player',
-        exact:true,
-        component:MQPlayer
     }
 ]
 
