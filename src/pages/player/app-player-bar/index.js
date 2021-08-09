@@ -69,7 +69,6 @@ export default memo(function MQAppPlayerBar() {
     let i = 0;
     for (; i < lyricList.length; i++) {
       let lyricItem = lyricList[i];
-      console.log(lyricList[i])
       if (currentTime < lyricItem.time) {
         break;
       }

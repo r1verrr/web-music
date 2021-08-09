@@ -30,11 +30,11 @@ function MQTopBanner(props) {
         dispatch(getTopBannerAction())
     },[dispatch]);
 
-    const bannerChange = useCallback(
-        (from, to) => {
+    const bannerChange = useCallback((from, to) => {
+          setTimeout(()=> {
             setCurrentIndex(to)
-        },
-        [],
+          },0)
+        },[],
     )
     // 其它业务逻辑
     const bgImage = topBanners[currentIndex] && (topBanners[currentIndex].imageUrl + "?imageView&blur=40x20")
