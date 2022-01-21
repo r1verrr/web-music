@@ -18,7 +18,7 @@ export default memo(function MQHotRecommend() {
         hotRecommends: state.getIn(["recommend","hotRecommends"])
     }),shallowEqual);
 
-    console.log(hotRecommends,'21')
+    console.log(hotRecommends,'-------------')
     const dispatch = useDispatch()
 
     // other hooks

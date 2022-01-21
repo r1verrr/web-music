@@ -25,7 +25,7 @@ export default memo(function MQSongsCover(props) {
         {info.name}
       </div>
       <div className="cover-source text-nowrap">
-        by {info.copywriter || info.creator.nickname}
+        by {info.copywriter ||(info.creator && info.creator.nickname)}
       </div>
     </SongsCoverWrapper>
   )
